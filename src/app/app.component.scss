@@ -1,0 +1,21 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+mat-sidenav-content {
+  min-height: 100vh;
+}
+
+.button {
+  color: white;
+  margin-left: 110px;
+}
+
+.button:hover {
+  color: #fff;
+}
+
+mat-sidenav{
+  width: 280px;
+}
+
+mat-icon {
+  color: white;
+}

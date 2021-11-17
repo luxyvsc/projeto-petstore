@@ -1,0 +1,30 @@
+<mat-sidenav-container>
+
+  <mat-sidenav #sideBar mode="over">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+      <p>Menu irá ficar aqui
+        <button mat-icon-button class="btn button" (click)='sideBar.toggle()'>
+          <h6>X</h6>
+        </button>
+      </p>
+    </nav>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+      <button mat-icon-button class="example-icon" class="btn" (click)='sideBar.toggle()' aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </nav>
+
+
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
