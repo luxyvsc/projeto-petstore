@@ -9,28 +9,36 @@ import { CategoriesService } from './categories.service';
 describe('CategoriesService', () => {
   let service: CategoriesService;
   let httpTestingController: HttpTestingController;
+  let httpClient: HttpClient
 
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      imports: [ HttpClientTestingModule ]
+    });
     service = TestBed.inject(CategoriesService);
+
+    httpClient = TestBed.inject(HttpClient)
+    httpTestingController = TestBed.inject(HttpTestingController);
   });
 
   it('should test get categories', () => {
     service.getCategories().subscribe(categories => {
-      expect(categories.length).toEqual(1);
-      expect(categories[0].name).toEqual('Racao');
+      expect(categories.length).toEqual(2);
+      expect(categories[0].name).toEqual('Ração');
     })
 
-    const req = httpTestingController.expectOne('http://petshop-sp.ue.r.appspot.com/v1/categories');
+    const req = httpTestingController.expectOne('https://petshop-sp.ue.r.appspot.com/v1/categories');
 
     expect(req.request.method).toEqual('GET');
 
     const categories: Array<Category> = [
-      {id: 'dasdasd', name: 'Racao', subcategories: ['racao seca'], url: '', description: ''},
+      {id: 'dasdasd', name: 'Ração', subcategories: ['Ração seca'], url: '', description: ''},
       {id: 'dasdasd', name: 'Brinquedos', subcategories: ['pelucia'], url: '', description: ''}
     ]
     req.flush(categories);
+
+    httpTestingController.verify();
 
   });
 })
