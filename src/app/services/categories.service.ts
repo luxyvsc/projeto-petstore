@@ -1,13 +1,14 @@
+import { Category } from './../interfaces/product';
 import { HttpClientModule, HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Category } from '../interfaces/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoriesService {
+  [x: string]: any;
 
   constructor(
     private http: HttpClient,
@@ -26,6 +27,7 @@ export class CategoriesService {
           }
         )
     });
-}
+
+  }
 }
 

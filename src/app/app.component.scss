@@ -1,5 +1,5 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
-mat-sidenav-content {
+.navbar-toggler {
   min-height: 100vh;
 }
 
@@ -18,4 +18,8 @@ mat-sidenav{
 
 mat-icon {
   color: white;
+}
+
+h4 {
+  margin-right: 30px;
 }

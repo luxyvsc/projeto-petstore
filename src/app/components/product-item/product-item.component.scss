@@ -1,0 +1,49 @@
+.content {
+
+  margin: 0 auto;
+  display: flex;
+}
+
+.items {
+  text-align: center;
+  height: 100px;
+  margin: 20px;
+  flex: content;
+  border: 1px solid black;
+}
+
+img {
+  text-align: center;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.desconto {
+  text-decoration: line-through;
+}
+
+mat-card {
+  text-align: center;
+  margin: 15px;
+  cursor: pointer;
+}
+
+mat-card:hover {
+  background: #FAF9F9;
+}
+
+mat-card-title {
+  font-size: 1.2em;
+}
+.min {
+  min-width: 100px;
+  min-height: 250px;
+}
+
+@media (max-width: 300px) {
+  .min {
+    min-width: 200px;
+  }
+}

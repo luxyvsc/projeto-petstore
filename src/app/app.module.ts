@@ -10,11 +10,19 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { CategoriesFeaturedComponent } from './components/categories-featured/categories-featured.component';
+import { ProductItemComponent } from './components/product-item/product-item.component';
+import { ProductComponent } from './pages/product/product.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    CategoriesFeaturedComponent,
+    ProductItemComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +31,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

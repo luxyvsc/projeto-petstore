@@ -5,19 +5,20 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 
 import { CategoriesService } from './categories.service';
+import { CategoriesServiceMock } from '../mocks/categories-mocks';
 
 describe('CategoriesService', () => {
   let service: CategoriesService;
   let httpTestingController: HttpTestingController;
-  let httpClient: HttpClient
+  let httpClient: HttpClient;
 
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [ HttpClientTestingModule ]
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [ HttpClientTestingModule ],
     });
-    service = TestBed.inject(CategoriesService);
 
+    service = TestBed.inject(CategoriesService);
     httpClient = TestBed.inject(HttpClient)
     httpTestingController = TestBed.inject(HttpTestingController);
   });

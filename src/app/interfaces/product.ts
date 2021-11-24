@@ -3,7 +3,7 @@ export interface Product {
     name: string;
     description: string;
     value: number;
-    promotional_value?: number;
+    promotional_value: number;
     featured_image: string;
     images: Array<String>;
     videos: Array<String>;
@@ -33,10 +33,10 @@ export enum AnimalType {
 export interface Category {
   id: string;
   name: string;
+  key?: string;
   subcategories: Array<string>;
   url: string;
   description: string;
-
 }
 
 export interface Parameters {

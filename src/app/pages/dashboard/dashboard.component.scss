@@ -1,0 +1,32 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.banner-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+
+.ml {
+  margin-left: 100px;
+}
+
+.item {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media(max-width: 400px) {
+  .wrap {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

@@ -1,4 +1,4 @@
-<mat-sidenav-container>
+<mat-sidenav-container id="oi">
 
   <mat-sidenav #sideBar mode="over">
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
@@ -18,6 +18,7 @@
       <button mat-icon-button class="example-icon" class="btn" (click)='sideBar.toggle()' aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
       </button>
+      <h4 id="title" style="color: white;" [routerLink]="['/']">Petstore</h4>
     </nav>
 
 

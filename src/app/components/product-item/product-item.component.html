@@ -1,0 +1,26 @@
+<mat-card class="min">
+    <img [src]="product.featured_image" [alt]="product.name" onError="this.src = 'https://cdn.neemo.com.br/uploads/settings_webdelivery/logo/3957/image-not-found.jpg'" width="50px">
+    <mat-card-title>
+      {{product.name}}
+    </mat-card-title>
+    <mat-card-subtitle>
+      <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+        <mat-icon>
+            <ng-container *ngIf="product.rating_stars >= star">
+                star
+            </ng-container>
+            <ng-container *ngIf="product.rating_stars == star/0.5 ">
+              star_half
+            </ng-container>
+          <ng-container *ngIf="product.rating_stars < star">
+            star_border
+        </ng-container>
+        </mat-icon>
+      </ng-container>
+    </mat-card-subtitle>
+    <mat-card-content>
+      <p class="desconto">{{product.value | currency: 'BRL'}}</p><br/>
+      {{product.promotional_value | currency: 'BRL'}}
+
+    </mat-card-content>
+</mat-card>
