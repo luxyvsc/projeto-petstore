@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from './../interfaces/product';
 import { HttpClient } from '@angular/common/http';
-import { tap } from 'rxjs';
+import { Observable, take, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -21,5 +21,19 @@ export class ProductsService {
       )
   }
 
+  getProduct(id: string): Observable<Product> {
+    return new Observable<Product>(observer => {
+      this.http.get<Product>(`${environment.apiUrl}v1/product/${id}`).subscribe(
+        product => {
+          observer.next(product);
+          observer.complete();
+        },
+        error => {
+          observer.next(error);
+          observer.complete();
+        }
+      );
+    });
+  }
 
 }

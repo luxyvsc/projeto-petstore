@@ -19,7 +19,7 @@ describe('CategoriesService', () => {
     });
 
     service = TestBed.inject(CategoriesService);
-    httpClient = TestBed.inject(HttpClient)
+    httpClient = TestBed.inject(HttpClient);
     httpTestingController = TestBed.inject(HttpTestingController);
   });
 

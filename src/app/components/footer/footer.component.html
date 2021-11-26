@@ -1,0 +1,23 @@
+<footer class="footer grid">
+  <div class="col-4 description">
+    <img src="https://img.freepik.com/vetores-gratis/petshop-com-gato-e-cachorro_9645-763.jpg" alt="Petshop" width="200px" height="100px">
+    <ng-container *ngIf="parameter" >
+    <h6>{{parameter.address}}</h6>
+    <h6>{{parameter.address_complement}}</h6>
+    <h6>{{parameter.zip_code}}</h6>
+    <h6>{{parameter.city}}</h6>
+    <h6>{{parameter.state}}</h6>
+    <ng-container>
+      <h6>Principal: +55 (11) 4063-4100</h6>
+      <h6>whatsapp: +55 (11) 94063-4100</h6>
+    </ng-container>
+  </ng-container>
+  <h6 class="social">@Petstore</h6>
+  </div>
+
+
+
+  <div class="col-4 social-medias">
+    <p>Siga-nos nas Redes Sociais</p>
+  </div>
+</footer>

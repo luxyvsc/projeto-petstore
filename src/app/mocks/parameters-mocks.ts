@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class ParametersService {
+export class ParametersServiceMock {
 
   constructor(private http: HttpClient) { }
 

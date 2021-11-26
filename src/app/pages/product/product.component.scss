@@ -1,0 +1,101 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadCrumb {
+  margin-bottom: 30px;
+  display: inline;
+}
+
+.promotional {
+  text-decoration: line-through;
+}
+
+
+
+.image {
+  width: 300px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+}
+
+.default {
+  margin-bottom: 15px;
+}
+
+.shop {
+  padding-left: 100px;
+}
+
+.value-promotional {
+  color: #ED386A;
+}
+
+.swiper-container {
+  height: 270px;
+  max-width: 230px;
+  .swiper-slide {
+      img {
+          max-width: 100%;
+      }
+  }
+}
+
+@media(max-width: 1050px) {
+
+
+  .shop {
+    padding-left: 0;
+  }
+
+  .image {
+    width: 200px;
+    padding-right: 30px;
+  }
+}
+
+@media(max-width: 800px) {
+  .container{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .grid {
+    display: grid;
+  }
+
+  .shop {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .shop h5 {
+    font-size: 1em;
+  }
+
+  .image {
+    width: 200px;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+
+  .swiper-container {
+    height: 270px;
+    max-width: 230px;
+    .swiper-slide {
+        img {
+            max-width: 100%;
+        }
+    }
+    margin: 0 auto;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .btn-sm {
+    width: 100%;
+  }
+}
