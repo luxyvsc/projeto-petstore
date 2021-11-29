@@ -2,13 +2,13 @@
 
   <mat-sidenav #sideBar mode="over">
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-      <p>Menu irá ficar aqui
-        <button mat-icon-button class="btn button" (click)='sideBar.toggle()'>
-          <h6>X</h6>
-        </button>
-      </p>
+      <button mat-icon-button class="btn button" (click)='sideBar.toggle()'>
+        <h6>X</h6>
+      </button>
     </nav>
-
+    <div *ngFor="let menu of menus;" class="container grid menu">
+        <button class="btn btn-light link-menu" (click)="showPage(menu.router, sideBar)">{{menu.name}}</button>
+    </div>
   </mat-sidenav>
 
   <mat-sidenav-content>

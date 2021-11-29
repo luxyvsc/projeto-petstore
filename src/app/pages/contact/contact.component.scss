@@ -1,0 +1,37 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+}
+
+.btn-custom {
+  background: #F4F6F7;
+  border: 1px solid #ECF0F1 ;
+}
+
+.default-form-btn {
+  width: 70%;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+
+.btn-custom:hover {
+  background: #F0F3F4;
+}
+
+.contact-form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.default-form {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+

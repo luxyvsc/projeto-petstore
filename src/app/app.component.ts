@@ -1,4 +1,6 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Petstore';
+
+  menus = [
+    {'name': 'Home', 'router': '/'},
+    {'name': 'Contato', 'router': '/contact'},
+    {'name': 'Produtos', 'router': '/products'},
+  ]
+
+  constructor(
+    private router: Router,
+  ){}
+
+  showPage(pageName: string, sideBar: MatSidenav) {
+    this.router.navigate([pageName]);
+    sideBar.close();
+  }
 }
